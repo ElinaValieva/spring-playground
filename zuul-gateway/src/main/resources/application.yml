@@ -4,5 +4,5 @@ eureka.client.service-url.default-zone: ${vcap.services.pwa-eureka-service.crede
 zuul.routes:
   gallery-service:
     url: http://localhost:8100
-    path: /gallery-service/**
+    path: /**
     service-id: gallery-service
