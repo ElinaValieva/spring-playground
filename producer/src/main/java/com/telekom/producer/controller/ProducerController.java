@@ -1,24 +1,27 @@
 package com.telekom.producer.controller;
 
-import com.telekom.producer.producer.Producer;
+import com.telekom.producer.component.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Controller;
 
 /**
  * author: ElinaValieva on 02.02.2019
  */
-@RestController
+@Controller
 public class ProducerController {
 
-    @Autowired
-    private Producer producer;
+    private final Producer producer;
 
-    @RequestMapping("/send")
-    public String sendMsg(@RequestParam("msg")String msg){
+    @Autowired
+    public ProducerController(Producer producer) {
+        this.producer = producer;
+    }
+
+    @Scheduled(fixedDelay = 5000)
+    public void sendMsg() {
+        String msg = "Generated value: " + Math.random();
         producer.produceMsg(msg);
-        return "Done";
     }
 
 }

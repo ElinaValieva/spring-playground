@@ -1,9 +1,13 @@
-package com.telekom.producer.producer;
+package com.telekom.producer.component;
 
+import com.telekom.producer.controller.ProducerController;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * author: ElinaValieva on 02.02.2019
@@ -11,8 +15,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Producer {
 
-    @Autowired
-    private AmqpTemplate amqpTemplate;
+    private final AmqpTemplate amqpTemplate;
+
+    private Logger logger = Logger.getLogger(ProducerController.class.getName());
 
     @Value("${jsa.rabbitmq.exchange}")
     private String exchange;
@@ -20,8 +25,13 @@ public class Producer {
     @Value("${jsa.rabbitmq.routingkey}")
     private String routingKey;
 
-    public void produceMsg(String msg){
+    @Autowired
+    public Producer(AmqpTemplate amqpTemplate) {
+        this.amqpTemplate = amqpTemplate;
+    }
+
+    public void produceMsg(String msg) {
         amqpTemplate.convertAndSend(exchange, routingKey, msg);
-        System.out.println("Send msg = " + msg);
+        logger.log(Level.FINE, "Generated value: " + msg);
     }
 }
