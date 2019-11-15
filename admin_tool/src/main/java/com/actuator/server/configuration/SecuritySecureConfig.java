@@ -27,6 +27,5 @@ public class SecuritySecureConfig {
                 .and().logout().logoutUrl(adminContextPath + "/logout")
                 .and().httpBasic()
                 .and().csrf().disable().build();
-
     }
 }
