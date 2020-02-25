@@ -1,0 +1,14 @@
+server.port: 8762
+spring.application.name: zuul-gateway
+eureka.client.service-url.default-zone: ${vcap.services.pwa-eureka-service.credentials.uri}/eureka/
+
+zuul.routes:
+  gallery-service:
+    path: /**
+    service-id: gallery-service
+
+  auth-service:
+    path: /auth/**
+    service-id: auth-service
+    strip-prefix: false
+    .sensitive-headers: Cookie,Set-Cookie
