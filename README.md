@@ -1,5 +1,5 @@
 
-# :neckbeard: Spring Boot Admin
+# :neckbeard: Spring Boot Admin ![Java CI](https://github.com/ElinaValieva/spring-boot-admin-ops/workflows/Java%20CI/badge.svg?branch=master)
 > Admin Ops tool for monitoring application with spring-boot-admin
 
 ![enter image description here](https://github.com/ElinaValieva/spring-admin-ops/blob/master/ezgif.com-gif-maker.gif)
