@@ -14,12 +14,18 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: 
+      run: |
+        echo "Build for spring-websockets-amqp project"
         mvn -B package --file spring-websockets-amqp/consumer/pom.xml
-        mvn -B package --file spring-websockets-amqp/producer/pom.xml
+        mvn -B package --file spring-websockets-amqp/consumer/pom.xml
+        echo "Build for spring-actuator"
         mvn -B package --file spring-actuator/pom.xml
+        echo "Build for spring-actuator"
+        mvn -B package --file spring-actuator/pom.xml
+        echo "Build for spring-boot-admin-ops"
         mvn -B package --file spring-boot-admin-ops/pom.xml
+        echo "Build for spring-boot-config"
         mvn -B package --file spring-boot-config/pom.xml
-        mvn -B package --file spring-cloud-eureka/pom.xml
+        echo "Build for spring-session-data-redis"
         mvn -B package --file spring-session-data-redis/pom.xml
       
