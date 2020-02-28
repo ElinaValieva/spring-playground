@@ -1,4 +1,4 @@
-# Spring session with Redis ![Java CI](https://github.com/ElinaValieva/spring-session-data-redis/workflows/Java%20CI/badge.svg?branch=master)
+# Spring session with Redis
 > Spring Boot project with redis-session configuration
 
 ### Prerequsites :heavy_exclamation_mark:
