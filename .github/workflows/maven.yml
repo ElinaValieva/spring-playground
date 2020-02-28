@@ -15,10 +15,10 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: 
+        mvn -B package --file spring-websockets-amqp/pom.xml
         mvn -B package --file spring-actuator/pom.xml
         mvn -B package --file spring-boot-admin-ops/pom.xml
         mvn -B package --file spring-boot-config/pom.xml
         mvn -B package --file spring-cloud-eureka/pom.xml
         mvn -B package --file spring-session-data-redis/pom.xml
-        mvn -B package --file spring-websockets-amqp/pom.xml
       
