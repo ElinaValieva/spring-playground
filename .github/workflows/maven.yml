@@ -15,7 +15,8 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: 
-        mvn -B package --file spring-websockets-amqp/pom.xml
+        mvn -B package --file spring-websockets-amqp/consumer/pom.xml
+        mvn -B package --file spring-websockets-amqp/producer/pom.xml
         mvn -B package --file spring-actuator/pom.xml
         mvn -B package --file spring-boot-admin-ops/pom.xml
         mvn -B package --file spring-boot-config/pom.xml
