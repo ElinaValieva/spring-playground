@@ -1,8 +1,8 @@
 
-# :neckbeard: Spring Boot Admin ![Java CI](https://github.com/ElinaValieva/spring-boot-admin-ops/workflows/Java%20CI/badge.svg?branch=master)
+# :neckbeard: Spring Boot Admin
 > Admin Ops tool for monitoring application with spring-boot-admin
 
-![enter image description here](https://github.com/ElinaValieva/spring-admin-ops/blob/master/ezgif.com-gif-maker.gif)
+![enter image description here](https://github.com/ElinaValieva/spring-playground/blob/master/spring-boot-admin-ops/ezgif.com-gif-maker.gif)
 ### Prerequsites :heavy_exclamation_mark:
  1. `JDK 1.8` at least - for running app
  2. `Maven 3+`            - for building package
