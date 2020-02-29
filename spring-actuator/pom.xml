@@ -8,7 +8,7 @@
         <version>2.1.3.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.actuator.metrics</groupId>
+    <groupId>com.spring.actuator</groupId>
     <artifactId>custom_metric</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>custom_metric</name>

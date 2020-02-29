@@ -9,7 +9,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.actuator</groupId>
+    <groupId>com.spring</groupId>
     <artifactId>admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 

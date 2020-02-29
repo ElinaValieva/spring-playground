@@ -1,12 +1,14 @@
-# SIMPLE MICROSERVICE WITH JWT TOKEN AUTHORIZATION 
-:octocat: simple microservices with spring cloud and eureka
+# :art: Gallery Microservices
+> Microservices with Spring Cloud Eureka & Zuul Gateway
 
-## Arhitecture
-![1](https://cdn1.savepice.ru/uploads/2018/10/11/48613f50a1bc2987bc6a5bf3999d2892-full.png)
+### Prerequisites :heavy_exclamation_mark:
 
-## Technologies
-- Spring Boot
-- Spring Cloud with Eureka client and server
-- Zuul 
+ 1. `JDK 1.8` at least - for running app
+ 2. `Maven 3+` - for building package
+ 
+### Build and Deploy :hammer:
+ 
+  1. Build application with spring-eureka pom.xml `mvn clean package`
+  2. Go to `http://localhost:8762`
 
 
