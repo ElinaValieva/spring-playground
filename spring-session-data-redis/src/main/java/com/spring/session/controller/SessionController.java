@@ -1,4 +1,4 @@
-package com.example.session.controller;
+package com.spring.session.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.ResponseEntity;
