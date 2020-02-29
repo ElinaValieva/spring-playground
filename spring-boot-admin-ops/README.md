@@ -1,4 +1,3 @@
-
 # :neckbeard: Spring Boot Admin
 > Admin Ops tool for monitoring application with spring-boot-admin
 

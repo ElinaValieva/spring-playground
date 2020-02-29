@@ -1,4 +1,4 @@
-package com.actuator.server;
+package com.spring.server;
 
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;

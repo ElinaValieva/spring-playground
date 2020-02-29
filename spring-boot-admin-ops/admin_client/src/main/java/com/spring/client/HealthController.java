@@ -1,4 +1,4 @@
-package com.actuator.client;
+package com.spring.client;
 
 
 import org.springframework.http.ResponseEntity;

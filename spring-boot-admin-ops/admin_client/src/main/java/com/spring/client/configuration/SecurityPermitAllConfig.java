@@ -1,4 +1,4 @@
-package com.actuator.client.configuration;
+package com.spring.client.configuration;
 
 
 import org.springframework.context.annotation.Configuration;

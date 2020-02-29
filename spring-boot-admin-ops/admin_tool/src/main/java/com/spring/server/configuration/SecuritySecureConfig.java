@@ -1,4 +1,4 @@
-package com.actuator.server.configuration;
+package com.spring.server.configuration;
 
 
 import de.codecentric.boot.admin.server.config.AdminServerProperties;

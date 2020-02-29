@@ -1,4 +1,4 @@
-package com.actuator.server.configuration;
+package com.spring.server.configuration;
 
 import com.hazelcast.config.*;
 import com.hazelcast.map.merge.PutIfAbsentMapMergePolicy;
