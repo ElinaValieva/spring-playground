@@ -1,4 +1,4 @@
-# Spring session with Redis
+# :busts_in_silhouette: Spring session with Redis
 > Spring Boot project with redis-session configuration
 
 ### Prerequisites :heavy_exclamation_mark:

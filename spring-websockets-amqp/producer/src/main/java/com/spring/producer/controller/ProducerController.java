@@ -1,6 +1,6 @@
-package com.telekom.producer.controller;
+package com.spring.producer.controller;
 
-import com.telekom.producer.component.Producer;
+import com.spring.producer.component.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Controller;

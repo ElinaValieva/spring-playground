@@ -1,4 +1,4 @@
-package com.telekom.consumer.common;
+package com.spring.consumer.common;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

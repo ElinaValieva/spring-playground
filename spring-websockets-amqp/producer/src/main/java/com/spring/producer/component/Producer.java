@@ -1,6 +1,6 @@
-package com.telekom.producer.component;
+package com.spring.producer.component;
 
-import com.telekom.producer.controller.ProducerController;
+import com.spring.producer.controller.ProducerController;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

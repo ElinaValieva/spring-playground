@@ -1,4 +1,4 @@
-package com.telekom.consumer.component;
+package com.spring.consumer.component;
 
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.telekom.consumer.common.URL.TOPIC_PUBLIC;
+import static com.spring.consumer.common.URL.TOPIC_PUBLIC;
 
 /**
  * author: ElinaValieva on 02.02.2019
