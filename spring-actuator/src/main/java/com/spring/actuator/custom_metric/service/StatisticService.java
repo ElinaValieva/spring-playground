@@ -1,7 +1,7 @@
-package com.actuator.metrics.custom_metric.service;
+package com.spring.actuator.custom_metric.service;
 
 
-import com.actuator.metrics.custom_metric.model.Statistic;
+import com.spring.actuator.custom_metric.model.Statistic;
 import org.springframework.stereotype.Service;
 
 

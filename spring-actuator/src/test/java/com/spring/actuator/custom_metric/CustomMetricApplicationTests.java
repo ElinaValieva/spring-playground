@@ -1,4 +1,4 @@
-package com.actuator.metrics.custom_metric;
+package com.spring.actuator.custom_metric;
 
 
 import org.junit.Test;

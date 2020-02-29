@@ -1,4 +1,4 @@
-package com.actuator.metrics.custom_metric.model;
+package com.spring.actuator.custom_metric.model;
 
 
 import lombok.Builder;

@@ -1,9 +1,9 @@
-package com.actuator.metrics.custom_metric.configuration;
+package com.spring.actuator.custom_metric.configuration;
 
 
-import com.actuator.metrics.custom_metric.common.URLs;
-import com.actuator.metrics.custom_metric.model.Statistic;
-import com.actuator.metrics.custom_metric.service.StatisticService;
+import com.spring.actuator.custom_metric.common.URLs;
+import com.spring.actuator.custom_metric.model.Statistic;
+import com.spring.actuator.custom_metric.service.StatisticService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;

@@ -1,4 +1,4 @@
-package com.actuator.metrics.custom_metric.common;
+package com.spring.actuator.custom_metric.common;
 
 
 import lombok.AccessLevel;

@@ -1,4 +1,5 @@
 # :chart_with_downwards_trend: Custom Actuator metrics
+> Custom endpoint for spring-actuator
 
 ### Prerequisites :heavy_exclamation_mark:
 
