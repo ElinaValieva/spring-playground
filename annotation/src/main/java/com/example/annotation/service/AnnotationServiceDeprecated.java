@@ -1,5 +1,6 @@
 package com.example.annotation.service;
 
+import com.example.annotation.deprecated.DeprecatedService;
 import com.example.annotation.monitor.Monitor;
 import com.example.annotation.rand.RandGenerator;
 import lombok.extern.log4j.Log4j2;
@@ -8,12 +9,13 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 
 /**
- * Annotation for getting monitor information in postProcessAfterInitialization of TestService bean
+ * Annotation to deprecate usage of old version and replace it by new version
+ * Done by configuring bean definition in beanFactoryPostProcessor
  */
 @Log4j2
-@Monitor
 @Service
-public class TestServiceImpl implements TestService {
+@DeprecatedService(actual = AnnotationServiceActual.class)
+public class AnnotationServiceDeprecated implements AnnotationService {
 
     /**
      * Annotation initialize rand value only on postProcessBeforeInitialization of TestService bean

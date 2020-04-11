@@ -1,6 +1,6 @@
 package com.example.annotation.service;
 
-public interface TestService {
+public interface AnnotationService {
 
     void execute();
 }
