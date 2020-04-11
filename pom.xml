@@ -16,5 +16,6 @@
         <module>spring-cloud-eureka</module>
         <module>spring-session-data-redis</module>
         <module>spring-websockets-amqp</module>
+        <module>spring-annotation</module>
     </modules>
 </project>
