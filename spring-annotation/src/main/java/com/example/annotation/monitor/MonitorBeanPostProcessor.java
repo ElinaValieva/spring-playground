@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import java.lang.reflect.Proxy;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 
 @Log4j2
 @Configuration
@@ -31,10 +30,7 @@ public class MonitorBeanPostProcessor implements BeanPostProcessor {
                 return Proxy.newProxyInstance(bean.getClass().getClassLoader(), bean.getClass().getInterfaces(), (proxy, method, args) -> {
                     long start = System.nanoTime();
                     Object invoke = method.invoke(bean, args);
-                    long timeSeconds = TimeUnit.SECONDS.convert(System.nanoTime() - start, TimeUnit.NANOSECONDS);
-                    long timeMilliSeconds = TimeUnit.MILLISECONDS.convert(System.nanoTime() - start, TimeUnit.NANOSECONDS);
-                    log.info("Memory: {}, Time: {} s {} ms", Runtime.getRuntime().freeMemory(), timeSeconds, timeMilliSeconds);
-
+                    log.info("Memory: {}, Time: {} ns", Runtime.getRuntime().freeMemory(), System.nanoTime() - start);
                     return invoke;
                 });
             }
