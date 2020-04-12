@@ -1,0 +1,2 @@
+org.springframework.context.ApplicationContextInitializer=com.spring.config.starter.ProfileAppInitializer
+org.springframework.boot.env.EnvironmentPostProcessor=com.spring.config.starter.ProfileEnvironmentPostProcessor
