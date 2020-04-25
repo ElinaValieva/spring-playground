@@ -17,5 +17,6 @@
         <module>spring-session-data-redis</module>
         <module>spring-websockets-amqp</module>
         <module>spring-annotation</module>
+        <module>spring-testing</module>
     </modules>
 </project>
