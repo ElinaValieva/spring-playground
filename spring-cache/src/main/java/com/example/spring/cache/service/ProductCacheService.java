@@ -10,6 +10,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -50,7 +51,7 @@ public class ProductCacheService {
         return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
     }
 
-    @CachePut(value = "products", key = "#product.type")
+    @CacheEvict(value = "products", key = "#product.type", allEntries = true)
     public Product updateProduct(Product product) {
         log.info("Updating product: {}", product);
         Product foundedProduct = productRepository.findById(product.getId()).orElseThrow(() -> new RuntimeException("Product not found"));
@@ -66,7 +67,7 @@ public class ProductCacheService {
         productRepository.deleteById(id);
     }
 
-    @CachePut(value = "products", key = "#product.type")
+    @CacheEvict(value = "products", key = "#product.type", allEntries = true)
     public Product createProduct(Product product) {
         log.info("Creating product: {}", product);
         return productRepository.save(product);
@@ -76,5 +77,10 @@ public class ProductCacheService {
     public List<Product> getProductByType(String type) {
         log.info("Getting product by type: {}", type);
         return productRepository.findByType(type);
+    }
+
+    @PreDestroy
+    void tearDown() {
+        productRepository.deleteAll();
     }
 }
