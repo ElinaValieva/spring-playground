@@ -45,13 +45,12 @@ public class ProductCacheService {
         return products;
     }
 
-    @Cacheable(value = "products", key = "id")
     public Product getProductById(String id) {
         log.info("Getting all products");
         return productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
     }
 
-    @CachePut(value = "products", key = "product.id")
+    @CachePut(value = "products", key = "#product.type")
     public Product updateProduct(Product product) {
         log.info("Updating product: {}", product);
         Product foundedProduct = productRepository.findById(product.getId()).orElseThrow(() -> new RuntimeException("Product not found"));
@@ -67,15 +66,15 @@ public class ProductCacheService {
         productRepository.deleteById(id);
     }
 
-    @CachePut(value = "products", key = "product.id")
+    @CachePut(value = "products", key = "#product.type")
     public Product createProduct(Product product) {
         log.info("Creating product: {}", product);
         return productRepository.save(product);
     }
 
-    @Cacheable(value = "products", key = "type")
-    public Product getProductByType(String type) {
+    @Cacheable(value = "products", key = "#type")
+    public List<Product> getProductByType(String type) {
         log.info("Getting product by type: {}", type);
-        return productRepository.findByType(type).orElseThrow(() -> new RuntimeException("Product not found"));
+        return productRepository.findByType(type);
     }
 }

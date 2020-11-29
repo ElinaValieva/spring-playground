@@ -26,8 +26,8 @@ public class CacheRestController {
         return ResponseEntity.ok(productCacheService.getProductById(id));
     }
 
-    @GetMapping("/products/{type}")
-    public ResponseEntity<Product> getProductsByType(@PathVariable("type") String type) {
+    @GetMapping("/products/type/{type}")
+    public ResponseEntity<List<Product>> getProductsByType(@PathVariable("type") String type) {
         return ResponseEntity.ok(productCacheService.getProductByType(type));
     }
 
