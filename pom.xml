@@ -18,5 +18,6 @@
         <module>spring-websockets-amqp</module>
         <module>spring-annotation</module>
         <module>spring-testing</module>
+        <module>spring-cache</module>
     </modules>
 </project>
