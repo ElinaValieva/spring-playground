@@ -19,5 +19,6 @@
         <module>spring-annotation</module>
         <module>spring-testing</module>
         <module>spring-cache</module>
+        <module>spring-data</module>
     </modules>
 </project>
