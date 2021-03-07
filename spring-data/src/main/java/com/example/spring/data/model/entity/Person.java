@@ -1,8 +1,9 @@
 package com.example.spring.data.model.entity;
 
-import com.example.spring.data.model.entity.Author;
-import com.example.spring.data.model.entity.UserPermission;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
